@@ -309,7 +309,7 @@ aside .story hr {
 
 .mid-sec {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-top: 30px;
   background-color: #3d556c;
@@ -323,15 +323,15 @@ aside .story hr {
   }
 }
 
+@media only screen and (max-width: 560px) {
+  .mid-sec {
+    grid-template-columns: 1fr;
+  }
+}
 .mid-sec article,
 .bottom-sec article {
   width: 100%;
   color: white;
-}
-
-.mid-sec article:not(:last-child) {
-  border-right: solid white 1px;
-  padding-right: 8px;
 }
 
 .mid-sec article img,
@@ -350,7 +350,7 @@ aside .story hr {
 
 .bottom-sec {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   width: 100%;
   padding: 20px;
@@ -359,6 +359,12 @@ aside .story hr {
 @media only screen and (max-width: 820px) {
   .bottom-sec {
     grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .bottom-sec {
+    grid-template-columns: 1fr;
   }
 }
 
